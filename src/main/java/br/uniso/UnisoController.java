@@ -10,8 +10,10 @@ public class UnisoController {
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
 
     @PostMapping("criarAluno")
-    public void criarAluno(@RequestBody Aluno aluno) {
+    public boolean criarAluno(@RequestBody Aluno aluno) {
 
+        alunos.add(aluno);
+        return true;
     }
 
     @RequestMapping("hello")
